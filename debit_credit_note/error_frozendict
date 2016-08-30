@@ -1,0 +1,51 @@
+
+
+Odoo Server Error
+
+Traceback (most recent call last):
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 646, in _handle_exception
+    return super(JsonRequest, self)._handle_exception(exception)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 683, in dispatch
+    result = self._call_function(**self.params)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 319, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/service/model.py", line 118, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 312, in checked_call
+    result = self.endpoint(*a, **kw)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 962, in __call__
+    return self.method(*args, **kw)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 512, in response_wrap
+    response = f(*args, **kw)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/web/controllers/main.py", line 1145, in load
+    action = request.session.model(action_type).read([action_id], False, ctx)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 1067, in proxy
+    result = meth(cr, request.uid, *args, **kw)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/api.py", line 250, in wrapper
+    return old_api(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/base/ir/ir_actions.py", line 370, in read
+    results = super(ir_actions_act_window, self).read(cr, uid, ids, fields=fields, context=context, load=load)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/api.py", line 250, in wrapper
+    return old_api(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/models.py", line 3193, in read
+    result = BaseModel.read(records, fields, load=load)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/api.py", line 248, in wrapper
+    return new_api(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/models.py", line 3228, in read
+    self._read_from_database(stored, inherited)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/api.py", line 248, in wrapper
+    return new_api(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/models.py", line 3419, in _read_from_database
+    res2 = self._columns[f].get(cr, self._model, ids, f, user, context=context, values=result)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/osv/fields.py", line 1495, in get
+    result = self._fnct(obj, cr, uid, ids, name, self._arg, context)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/base/ir/ir_actions.py", line 312, in _search_view
+    'search', context=context)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/api.py", line 250, in wrapper
+    return old_api(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/debit_credit_note/wizard/account_invoice_refund.py", line 59, in fields_view_get
+    context.pop('form_view_ref', None)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/tools/misc.py", line 1087, in pop
+    raise NotImplementedError("'pop' not supported on frozendict")
+NotImplementedError: 'pop' not supported on frozendict
+

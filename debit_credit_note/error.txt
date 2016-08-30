@@ -1,0 +1,39 @@
+Odoo
+
+Odoo Server Error
+
+Traceback (most recent call last):
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 646, in _handle_exception
+    return super(JsonRequest, self)._handle_exception(exception)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 683, in dispatch
+    result = self._call_function(**self.params)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 319, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/service/model.py", line 118, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 312, in checked_call
+    result = self.endpoint(*a, **kw)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 962, in __call__
+    return self.method(*args, **kw)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/http.py", line 512, in response_wrap
+    response = f(*args, **kw)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/web/controllers/main.py", line 901, in call_button
+    action = self._call_kw(model, method, args, {})
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/web/controllers/main.py", line 889, in _call_kw
+    return getattr(request.registry.get(model), method)(request.cr, request.uid, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/api.py", line 250, in wrapper
+    return old_api(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/debit_credit_note/wizard/account_invoice_refund.py", line 282, in invoice_refund
+    return self.compute_refund(cr, uid, ids, data_refund, context=context)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/api.py", line 250, in wrapper
+    return old_api(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/addons/debit_credit_note/wizard/account_invoice_refund.py", line 169, in compute_refund
+    limit 1 """, (date,))
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/sql_db.py", line 141, in wrapper
+    return f(self, *args, **kwargs)
+  File "/home/kristian/odoov9/odoo-9.0c-20160712/openerp/sql_db.py", line 220, in execute
+    res = self._obj.execute(query, params)
+ProgrammingError: relation "account_period" does not exist
+LINE 2:                                     from account_period wher...
+                                                 ^
+
