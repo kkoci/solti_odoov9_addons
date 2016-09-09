@@ -12,7 +12,7 @@
     'description': u'''\n\nDTE CAF File Data Model\n\n''',
     'installable': True,
     'license': 'AGPL-3',
-    'name': 'CAF Container for DTE Compliance',
+    'name': 'Contenedor de archivos CAF',
     'test': [],
     'data': [
         'views/dte_caf.xml',
