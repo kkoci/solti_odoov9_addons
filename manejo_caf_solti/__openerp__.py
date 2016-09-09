@@ -2,7 +2,7 @@
 {
     'author': u'Kristian Koci - tomando inspiracion del modulo CAF de bmya',
     'category': 'Solti - Archivos CAF',
-    'depends': ['l10n_cl_invoice'],
+    'depends': ['invoice_solti'],
     "external_dependencies": {
         'python': [
             'xmltodict',

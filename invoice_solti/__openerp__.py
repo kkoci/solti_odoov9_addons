@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {   'active': False,
-    'author': u'Blanco Martín & Asociados, Chilean Localization Team 9.0',
-    'website': 'http://blancomartin.cl',
+    'author': u'Formularios factura chilena Solti',
+    'website': 'https://kkoci.github.io',
     'category': 'Localization/Chile',
     'demo_xml': [
        # 'data/partner_demo.xml',
@@ -9,8 +9,8 @@
     'depends': [   
         'account',
         'account_accountant',
-        'l10n_cl_base_rut',
-        'l10n_cl_partner_activities'
+        'rut_solti',
+        'solti_actividades_chile'
         ],
     'description': u'''
 \n\nMódulo de Facturación de la localización Chilena.\n\n\nIncluye:\n
@@ -20,7 +20,7 @@
     'init_xml': [],
     'installable': True,
     'license': 'AGPL-3',
-    'name': u'Chile - Sistema de apoyo a la facturación',
+    'name': u'Sistema de apoyo a la facturación',
     'test': [   
 #        'test/products.yml',
 #        'test/partners.yml',

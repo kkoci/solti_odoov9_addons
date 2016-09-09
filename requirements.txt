@@ -1,2 +1,9 @@
 xmltodict
+dicttoxml
+elaphe
+M2Crypto
 base64
+hashlib
+cchardet
+pyopenssl
+suds
